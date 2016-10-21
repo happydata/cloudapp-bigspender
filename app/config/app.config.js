@@ -106,6 +106,13 @@ cloudConfig.slots = {
     }
 };
 
+//
+// Setup what fields this cloud app needs.
+//
+// Each field represents data sent to the cloud app back-end.
+// This is where you collect required user information, and
+// other metrics.
+
 cloudConfig.fields = {}
 cloudConfig.fields.goal = {
   "type" : "text", //text, password, boolean, select
@@ -114,6 +121,14 @@ cloudConfig.fields.goal = {
   "placeholder" : "100.00",
   "description" : null,
   "required" :  true
+};
+cloudConfig.fields.email = {
+  "type": "text",
+  "label": "Your Email (Optional)",
+  "value": "",
+  "placeholder": "john@doe.com",
+  "description": "Allows you to receive email alerts.",
+  "required": false
 };
 
 // 
